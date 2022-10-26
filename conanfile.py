@@ -9,7 +9,9 @@ class EIPScannerConan(ConanFile):
     generators = "cmake_find_package"
 
     def export_sources(self):
-        self.copy("*")
+        self.copy("src/*")
+        self.copy("CMakeLists.txt")
+        self.copy("LICENSE")
 
     def generate(self):
         CMakeToolchain(self).generate()
@@ -23,6 +25,7 @@ class EIPScannerConan(ConanFile):
     def package(self):
         cmake = CMake(self)
         cmake.install()
+        self.copy("license*", dst="licenses", ignore_case=True)
 
     def package_info(self):
         self.cpp_info.includedirs = ["include"]
