@@ -28,6 +28,6 @@ class EIPScannerConan(ConanFile):
         self.copy("license*", dst="licenses", ignore_case=True)
 
     def package_info(self):
-        self.cpp_info.includedirs = ["include"]
+        self.cpp_info.includedirs = ["include", "include/EIPScanner"]
         self.cpp_info.libdirs = ["lib"]
         self.cpp_info.libs = ["EIPScanner"]
