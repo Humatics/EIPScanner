@@ -4,7 +4,7 @@ from conan.tools.cmake import CMake, CMakeToolchain, CMakeDeps
 
 class EIPScannerConan(ConanFile):
     name = "EIPScanner"
-    version = "0.1.3"
+    version = "1.3.0"
     settings = "os", "arch", "compiler", "build_type"
     generators = "cmake_find_package"
 
