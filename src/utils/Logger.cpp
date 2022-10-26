@@ -8,7 +8,7 @@
 
 namespace eipScanner {
 namespace utils {
-	LogLevel Logger::_globalLogLevel = LogLevel::INFO;
+	LogLevel Logger::_globalLogLevel = LogLevel::WARNING;
 	LogAppenderIf::UPtr Logger::_appender = std::make_unique<ConsoleAppender>();
 
 	Logger::Logger(LogLevel logLevel): _logLevel{logLevel} {
