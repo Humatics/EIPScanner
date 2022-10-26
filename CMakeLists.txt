@@ -10,7 +10,7 @@ project(EIPScanner VERSION ${EIPSCANNER_FULL_VERSION})
 set(CMAKE_CXX_STANDARD 14)
 option(ENABLE_VENDOR_SRC "Enable vendor source" OFF)
 option(TEST_ENABLED "Enable unit test" OFF)
-option(EXAMPLE_ENABLED "Build examples" ON)
+option(EXAMPLE_ENABLED "Build examples" OFF)
 
 add_subdirectory(src)
 if (EXAMPLE_ENABLED)
